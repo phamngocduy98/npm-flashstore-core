@@ -1,7 +1,7 @@
 import {
-    firebase,
     Database,
     DocumentData,
+    firebase,
     FirestoreCollection,
     getRegisteredCollections,
     RealtimeFirestoreCollection

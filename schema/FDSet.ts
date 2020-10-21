@@ -1,4 +1,4 @@
-import {FirestoreDocument, FDArrayTracker} from "../internal";
+import {FDArrayTracker, FirestoreDocument} from "../internal";
 
 type DocumentDataTypeOf<T extends FirestoreDocument<any>> = T extends FirestoreDocument<infer D> ? D : never;
 

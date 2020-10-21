@@ -1,9 +1,9 @@
 import {
-    firebase,
     Database,
     DocumentChangedEvents,
     DocumentData,
     DocumentDataConstructor,
+    firebase,
     FirestoreCollection,
     ICollectionParent,
     RealtimeFirestoreDocument

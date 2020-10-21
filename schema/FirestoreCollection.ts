@@ -1,10 +1,10 @@
 import EventEmitter from "events";
 
 import {
-    firebase,
     Database,
     DocumentData,
     DocumentDataConstructor,
+    firebase,
     FirestoreDocument,
     ICollectionParent,
     RealtimeFirestoreDocument

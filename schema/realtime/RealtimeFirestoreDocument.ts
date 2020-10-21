@@ -1,8 +1,8 @@
 import {
-    firebase,
     Database,
     DocumentData,
     DocumentDataConstructor,
+    firebase,
     FirestoreCollection,
     FirestoreDocument,
     RealtimeFirestoreCollection

@@ -1,15 +1,15 @@
 import {
-    firebase,
     Database,
     DocumentData,
     DocumentDataConstructor,
     FDArrayTracker,
     FDTracker,
+    FDUnionArray,
+    firebase,
     FirestoreCollection,
     getRegisteredLinkingItems,
     ICollectionParent,
-    RealtimeFirestoreCollection,
-    FDUnionArray
+    RealtimeFirestoreCollection
 } from "../internal";
 
 export type FirestoreDocumentConstructor<T extends FirestoreDocument<any>> = {new (...args: any): T};

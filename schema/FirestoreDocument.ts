@@ -132,7 +132,7 @@ export class FirestoreDocument<D extends DocumentData> extends ICollectionParent
         return this.ref.set(DocumentData.toFirestoreUpdatableObject(documentData));
     }
 
-    update(updateParams: UpdateParams<D>): Promise<void> {
+    update(updateParams: UpdateParams<D>): Promise<any> {
         this._exists = undefined; // cached data is outed-date after updated, recall get() for new value
         return this.ref.update(DocumentData.toFirestoreUpdatableObject(updateParams));
     }

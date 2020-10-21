@@ -17,5 +17,3 @@ export * from "./schema/realtime/RealtimeFirestoreDocument";
 export * from "./schema/DocumentData";
 export * from "./schema/FirestoreDocument";
 export * from "./schema/FirestoreCollection";
-
-export * from "../hooks";

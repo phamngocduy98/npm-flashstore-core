@@ -129,6 +129,7 @@ export class FirestoreDocument<D extends DocumentData> extends ICollectionParent
 
     set(documentData: D) {
         // this._dataValue = documentData;
+        documentData._id = this.id;
         return this.ref.set(DocumentData.toFirestoreUpdatableObject(documentData));
     }
 

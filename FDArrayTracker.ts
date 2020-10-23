@@ -68,7 +68,8 @@ export class FDArrayTracker<D extends DocumentData> extends EventEmitter.EventEm
      * Add documents to the array in database only (not local, call .get() to sync the changes after you've done all modifications)
      * @param docs documents to add to the array
      */
-    add(...docs: FirestoreDocument<D>[]) {
+    add(...docs: FirestoreDocument<D>[]): Promise<any> {
+        if (docs.length === 0) return Promise.resolve();
         const refs = docs.map((doc) => doc.ref);
         return this.parent.ref.update({[this.arrayName]: firebase.firestore.FieldValue.arrayUnion(...refs)});
     }
@@ -77,7 +78,8 @@ export class FDArrayTracker<D extends DocumentData> extends EventEmitter.EventEm
      * Remove documents from the array in database only (not local, call .get() to sync the changes after you've done all modifications)
      * @param docs documents to remove from the array
      */
-    delete(...docs: FirestoreDocument<D>[]) {
+    delete(...docs: FirestoreDocument<D>[]): Promise<any> {
+        if (docs.length === 0) return Promise.resolve();
         const refs = docs.map((doc) => doc.ref);
         return this.parent.ref.update({[this.arrayName]: firebase.firestore.FieldValue.arrayRemove(...refs)});
     }
